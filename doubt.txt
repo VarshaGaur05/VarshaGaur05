@@ -1,0 +1,205 @@
+Odd Numbers
+Description
+Given a list of integer numbers, filter out the odd numbers.
+
+
+
+Input:
+
+6
+
+1 2 3 4 5 6
+
+Output:
+
+2
+
+4
+
+6
+
+Explanation: The odd numbers 1, 3 and 5 are filtered out leaving only even numbers.
+
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class Source {
+   public static void main(String[] args){
+       List<Integer> numbers = new ArrayList<>();
+       Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+       while(n-- > 0){
+           numbers.add(sc.nextInt());
+       }
+       printEvenNumbers(numbers);
+   }
+  
+   public static void printEvenNumbers(List<Integer> numbers){
+       List<Integer> evenNumbers = numbers.stream()
+               .filter(n -> n%2 == 0)
+               .collect(Collectors.toList());
+
+       evenNumbers.forEach(System.out::println);
+   }
+}
+
+
+You have been provided with a list of fruit names. Calculate the count of every fruit in the list.
+
+
+
+Testcase:
+
+Input:
+
+9
+
+mango
+
+apple
+
+grapes
+
+berry
+
+berry
+
+mango
+
+apple
+
+apple
+
+banana
+
+
+
+Output:
+
+{banana=1, apple=3, berry=2, grapes=1, mango=2}
+
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+
+public class countFruitInList {
+    public static void main(String[] args) {
+    List<String> fruits = new ArrayList<>();
+    Scanner sc  =  new Scanner(System.in);
+    int n = sc.nextInt();
+    while(n-- > 0){
+        fruits.add(sc.next());
+    }
+    PrintFruitCount(fruits);
+    }
+
+     public static void PrintFruitCount(List<String> fruits){
+        Map<String, Integer> Fruitcnt = new HashMap<>();
+        for (String s: fruits){
+            int count = Fruitcnt.getOrDefault(s,0);
+            Fruitcnt.put(s,count+1);
+         }
+
+         System.out.println(Fruitcnt.values());
+        int x = Fruitcnt.size();
+        int i = 1;
+         System.out.print("{");
+         for (Map.Entry<String, Integer> entry: Fruitcnt.entrySet()){
+             if (i < x){
+             System.out.print(entry.getKey() + "=" + entry.getValue() + ",");
+             } else{
+                 System.out.print(entry.getK
+
+
+
+Create a class named "NameThread" by extending the Thread class and print the thread names. 
+Now, create a thread of size 5 and verify how many different 
+threads of type NameThread get created by calling it 20 times.
+
+public class nameThread1 {
+    public static void main(String[] args) {
+//  Creates a //ExecutorService object having a pool of 5 threads.
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        for(int i = 0; i <20; i++){
+//  Submit the name thread instance
+            executorService.execute(new NameThread());
+        }
+// Terminate the executor service
+        executorService.shutdown();
+    }
+}
+class NameThread extends Thread{
+    public void run(){
+// get thread's name here.
+        System.out.println("Thread Name : " + Thread.currentThread().getName());
+    }
+}
+
+
+Fix Errors
+Description
+Fix the bug in the code to print the counter values from 1 to 100, in the correct order.
+
+
+
+Counter : 1
+
+Counter : 2
+
+...
+
+Counter : 999
+
+Counter : 1000
+
+private static int counter = 1;
+
+   public static void main(String[] args) {
+       ExecutorService executorService = Executors.newFixedThreadPool(5);
+       for (int i = 0; i < 10; i++) {
+           executorService.submit(new Source()).get();
+
+
+
+
+       }
+       executorService.shutdown();
+   }
+   public void run() {
+       while (counter <= 100) {
+           increment();
+       }
+   }
+
+   private void increment() {
+       System.out.println("Counter : " + counter);
+       counter++;
+   
+
+
+Biggest in list
+Description
+Find the biggest even number present in a list.
+
+Note: It's guaranteed that there will always be an even number in the input.
+
+
+
+Test cases:
+
+Input:
+
+8
+
+1 2 3 4 5 9 7 5
+
+Output:
+
+4
+
+System.out.println( numbers.stream().filter(x->x%2==0).mapToInt(x-> x).max().getAsInt());
+
+
+mapToInt gives a IntegerStream , so when you apply max to that it uses IntegerStream max function , so need to pass a comparator and the return type is OptionalInt , since we want int , we use getAsInt at the end to convert 

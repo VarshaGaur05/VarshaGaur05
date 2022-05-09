@@ -1,0 +1,7 @@
+you can download head first book https://github.com/MarkPThomas/HeadFirst-OOAD/blob/master/Head%20First%20Object-Oriented%20Analysis%20and%20Design.pdf
+
+OOD - https://drive.google.com/file/d/1DF1F6HK-u77CG0ONOYnSqUV9jhUo2jnx/view?usp=sharing
+
+Design Patterns - https://drive.google.com/file/d/1faBUWbf0Ms4Mr3zyk1A9pmKNCnoasqOQ/view?usp=sharing
+
+https://leetcode.com/

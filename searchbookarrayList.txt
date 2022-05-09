@@ -1,0 +1,80 @@
+class Book {
+private double bookId;
+Private string name;
+private string author;
+}
+class Library {
+private List<Book> availableBooks;
+
+public Library(List<Book> availableBooks){
+	this.availableBooks = availableBooks);
+}
+
+public boolean issue (string bookID) {
+for (Book bk : booklist) {
+if bk.bookID == bookID
+   booklist.remove(bk);
+   return true;    
+return false;
+
+public Book search (string bookname ){
+for (Book bk : booklist) {
+if bk.bookname  == bookname
+   return bk
+return NULL;
+
+public Book& search (double bookid ){
+for (Book bk : booklist) {
+if bk.bookid  == bookid
+   return bk;
+return NULL;
+
+public list findmorebooksby (string authorname) {
+list <Books> tempBooklist = new ArrayList<>();
+for (Book bk : booklist) {
+if bk.author  == author
+   tempBooklist.add(bk);
+return tempBooklist;
+
+public Library(booklist) {
+booklist  = new ArrayList(booklist)
+}
+
+
+
+
+
+//proper code
+// search (bookId) -> Book
+    public Book search(Integer bookId) {
+        for(Book book: availableBooks) {
+            if(book.getId().equals(bookId)) {
+                return book;
+            }
+        }
+        return null;
+    }
+
+    // returnBook (bookId) -> boolean
+    public boolean returnBook(Integer bookId) {
+        for(Book book: issuedBooks) {
+            if(book.getId().equals(bookId)) {
+                issuedBooks.remove(book);
+                availableBooks.add(book);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // findMoreBooksBy (authorName) -> List<Book> with same author name
+    public List<Book> findMoreBooksBy(String authorName) {
+        List<Book> recommendedBooks = new ArrayList<>();
+
+        for(Book book: availableBooks) {
+            if(book.getAuthorName().equals(authorName)) {
+                recommendedBooks.add(book);
+            }
+        }
+        return recommendedBooks;
+    }

@@ -1,0 +1,53 @@
+1. closure
+
+function a(){
+ var a = 10;
+  return function b(){
+	console.log(a);
+  }
+}
+
+
+Var a  = true;
+Console.log(a + 0);  ans- 1
+Console.log(a + true); ans- true
+Console.log(a + 'xyz'); ans true xyz
+Console.log(a + false); ans -1
+3.
+    Function a() {​​​ 
+ Console.log(a);
+ Var a = 10
+}​​​
+
+ans undefined
+
+4. Function a() {​​​
+Console.log(a);
+let a = 10
+}​​​
+
+Ans ReferenceError :
+​
+
+  5.   Console.log('a'); 
+Settimeout(() = {​​​
+Console.log('b'); }​​​, 0
+);
+Console.log('c');
+
+ans a c b
+
+
+6. hoisting-  the default behavior of moving all the declarations at the top of the scope before code execution
+7. Encapslation Angular
+8. Ascyn Pipe Angular
+9. Pure and Impure Pipe Angular
+10. Webworker HTML
+11. Specificer in CSS
+12. Mixin in CSS
+14. ChangeDetection in Angular
+15. Angular Performation
+16. Singlton Angular Services
+
+
+
